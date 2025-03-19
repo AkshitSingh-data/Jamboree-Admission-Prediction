@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jamboree Admission Prediction (Ivy League)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 1.5em;
+            color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Jamboree Admission Prediction (Ivy league)</h2>
+        <form action="/predict" method="post">
+            <label for="GRE score">GRE score:</label>
+            <input type="number" name="GRE score" required>
+            
+            <label for="TOEFL Score">TOEFL Score:</label>
+            <input type="number" step="0.01" name="TOEFL Score" required>
+            
+            <label for="University Rating (out of 5)">University Rating (out of 5):</label>
+            <input type="float" name="University Rating (out of 5)" required>
+            
+            <label for="SOP Strength (out of 5)">SOP Strength (out of 5):</label>
+            <input type="float" name="SOP Strength (out of 5)" required>
+            
+            <label for="LOR Strength (out of 5)">LOR Strength (out of 5):</label>
+            <input type="float" step="0.01" name="LOR Strength (out of 5)" required>
+
+            <label for="CGPA">CGPA:</label>
+            <input type="float" step="0.01" name="CGPA" required>
+
+            <label for="Research (0:No 1:Yes)">Research (0:No 1:Yes):</label>
+            <input type="number" step="0.01" name="Research (0:No 1:Yes)" required>
+            
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+        <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
