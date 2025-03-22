@@ -1,7 +1,9 @@
 # Jamboree-Admission-Prediction
 
 Welcome to the Jamboree Business Case Study repository! This project focuses on predicting the chances of students getting admitted to Ivy League colleges based on key academic and personal factors. The analysis is performed from an Indian applicant's perspective, leveraging regression models and statistical methods.
-demo link:-https://admission-prediction-system.onrender.com
+
+**demo link**:-https://admission-prediction-system.onrender.com
+
 **Note:**- As it is free web service, it will take 30-40 seconds to load for first time
 
 ## About The Project
